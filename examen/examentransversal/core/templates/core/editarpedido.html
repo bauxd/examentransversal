@@ -1,0 +1,100 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Perla Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href=" {%static 'core/css/diseno.css'  %} ">
+</head>
+
+  
+  <div class="medio">
+    <header>
+      <div class="row header">
+          <div class="col-12 col-md-6 header-rs">
+              <a href="https://www.facebook.com/" title="Visítanos en Facebook">
+              <img src=" {%static 'core/img/icons8_facebook_48px.png' %} " alt="">
+              </a>
+              <a href="https://www.instagram.com/" title="Visítanos en Instagram">
+              <img src=" {%static 'core/img/icons8_instagram_48px.png' %} " alt="">
+              </a>
+              </div>
+              <div class="col-12 col-md-6 header-logo">
+              <a href="{%url 'index' %}" title="Caos News">
+              <img src="  {%static  'core/img/logolaperla.png'  %}" alt="">
+              </a>
+        </div>
+        </div>
+  </header>
+
+      <body>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script scr="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+        <!--HEADER LOGOS-->
+
+        
+
+    <!--INICIO MENÚ-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{%url 'form' %}">Listado productos</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{%url 'form' %}">Estado de mi pedido</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{%url 'quien' %}">¿Quiénes somos?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{%url 'form' %}">Modificar estado pedido</a>
+              </li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+   <!--FIN MENÚ-->
+
+   <h2>Lista de compra</h2>
+   <table class="table table-hover">
+       <thead>
+           <tr>
+               <th>1</th>
+               <th>1</th>
+               <th>1</th>
+               <th>1</th>
+               <th>1</th>
+               <th>1</th>
+           </tr>
+       </thead>
+       <tbody>
+           {% for infocompra en formulario %}
+           <tr>
+               <td>{{formulario.nombre}}</td>
+               <td>{{formulario.apellido}}</td>
+               <td>{{formulario.rut}}</td>
+               <td>{{formulario.direccion}}</td>
+               <td>{{formulario.producto.producto}}</td>
+               <td>{{formulario.correo}}</td>
+           </tr>
+       </tbody>
+   </table>
+
+
+</script>
+</body>
+</html>

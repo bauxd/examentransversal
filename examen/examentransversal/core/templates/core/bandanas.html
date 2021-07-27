@@ -1,0 +1,197 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandanas - La Perla Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href=" {%static 'core/css/diseno.css'  %} ">
+</head>
+
+  
+  <div class="medio">
+    <header>
+      <div class="row header">
+          <div class="col-12 col-md-6 header-rs">
+              <a href="https://www.facebook.com/" title="Visítanos en Facebook">
+              <img src=" {%static 'core/img/icons8_facebook_48px.png' %} " alt="">
+              </a>
+              <a href="https://www.instagram.com/" title="Visítanos en Instagram">
+              <img src=" {%static 'core/img/icons8_instagram_48px.png' %} " alt="">
+              </a>
+              </div>
+              <div class="col-12 col-md-6 header-logo">
+              <a href="{%url 'index' %}" title="Caos News">
+              <img src="  {%static  'core/img/logolaperla.png'  %}" alt="">
+              </a>
+        </div>
+        </div>
+  </header>
+
+      <body>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script scr="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+        <!--HEADER LOGOS-->
+
+        
+<!--
+        <style>
+      
+          .contenedorapi {
+            width: 10%;
+          }
+          
+          .rowapi {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          
+          #pais {
+            font-size: 1em;
+            font-weight: bold;
+          }
+          
+          #imagen>img {
+            width: 35px;
+          }
+          
+          #temp {
+            font-size: 1.2em;
+          }
+          
+          #clima {
+            display: flex;
+            justify-content: center;
+            color: darkgray;
+            font-size: 1.2em;
+          }
+          
+                  </style>
+          
+          
+                  <div class="contenedorapi">
+                    <div class="rowapi">
+                        <div class="col" id="pais"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col" id="imagen"></div>
+                        <div class="col" id="temp"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col" id="clima"></div>
+                    </div>
+                </div>
+                <div id="demo"></div>
+                <script>
+                    d = document.getElementById("demo");
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(function (position) {
+                            latitud = position.coords.latitude;
+                            longitud = position.coords.longitude;
+                            $.get("http://api.openweathermap.org/data/2.5/weather?lat=" + latitud + "&lon=" + longitud + "&appid=2581f6487081d8ee37c38e25428ce588&units=metric&lang=es", function (data) {
+                                $("#pais").append(data.name + ", " + data.sys.country);
+                                $("#imagen").append("<img src='http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png'>");
+                                $("#temp").append(data.main.temp + "°C");
+                            });
+                        });
+                    }
+                </script>-->
+
+    <!--INICIO MENÚ-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{%url 'form' %}">Estado de mi pedido</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{%url 'form' %}">¿Quiénes somos?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{%url 'form' %}">Modificar estado pedido</a>
+              </li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+   <!--FIN MENÚ-->
+
+    <!--INICIO CATEGORIA-->
+    <br>
+    <br>
+    <h1>BANDANAS</h1>
+    <br>
+    <br>
+
+
+    <div class="img"><img src="  {%static  'core/img/headerbandanaperro.png' %} " alt=""></div>
+
+
+    <div class="row categoria">
+      <div class="col-12 col-sm-6 col-lg-3 tarjeta">
+        
+        <p class="titulo">Bandana Gatitos</p>
+        <img src="  {%static  'core/img/bandanagatito.png' %} " alt="">
+        <p>ID: 1</p>
+        <p>Un agradable diseño con pequeños gatitos.</p>
+        <a href="{%url 'form' %}" class="btn btn-primary">$13.990</a>
+      </div>       
+        <div class="col-12 col-sm-6 col-lg-3 tarjeta">
+            <p class="titulo">Bandana Corazones</p>
+            <img src="  {%static  'core/img/bandanacorazon.png' %} " alt="">
+            <p>ID: 2</p>
+            <p>Una bandana un poco cariñosa con mucho amor.</p>
+            <a href="{%url 'form' %}" class="btn btn-primary">$14.990</a>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3  tarjeta">
+          <p class="titulo">Bandana Anclas</p>
+          <img src="  {%static  'core/img/bandanaancla.png' %} " alt="">
+          <p>ID: 3</p>
+          <p>Bonito diseño, inspirado en anclas.</p>
+          <a href="{%url 'form' %}" class="btn btn-primary">$14.990</a>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="row categoria">
+          <div class="col-12 col-sm-6 col-lg-3 tarjeta">
+            
+            <p class="titulo">Bandana Dulces</p>
+            <img src="  {%static  'core/img/bandanadulce.png' %} " alt="">
+            <p>ID: 4</p>
+            <p>Muy dulce para que tu mascota lo sea aún más.</p>
+            <a href="{%url 'form' %}" class="btn btn-primary">$12.990</a>
+          </div>       
+            <div class="col-12 col-sm-6 col-lg-3 tarjeta">
+                <p class="titulo">Bandana Puntos</p>
+                <img src="  {%static  'core/img/bandanapuntos.png' %} " alt="">
+                <p>ID: 5</p>
+                <p>Algo sencilla, para mascotas sencillas.</p>
+                <a href="{%url 'form' %}" class="btn btn-primary">$9.990</a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3  tarjeta">
+              <p class="titulo">Bandana Hexágonos</p>
+              <img src="  {%static  'core/img/bandanahexagono.png' %} " alt="">
+              <p>ID: 6</p>
+              <p>Diseñada con figuras y bastante colorida.</p>
+              <a href="{%url 'form' %}" class="btn btn-primary">$10.990</a>
+            </div>
+
+            <br>
+            <h1>(Cualquier tipo de bandanas es tanto para perro como para gato)</h1>
+</body>
+</html>
